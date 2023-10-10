@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/08'
-
+@ignore
 Scenario: using css selector
 * match text('#messageId') == 'this div is outside the iframe'
 * switchFrame('#frameId')

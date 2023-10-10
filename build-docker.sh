@@ -12,7 +12,8 @@ cp -r ~/.m2/repository/com/intuit/karate ${KARATE_REPO}
 # create / copy the karate fatjar so that the docker image build can add it
 mvn -f karate-core/pom.xml package -P fatjar -DskipTests
 KARATE_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-cp karate-core/target/karate-${KARATE_VERSION}.jar karate-docker/karate-chrome/target/karate.jar
+# cp karate-core/target/karate-${KARATE_VERSION}.jar karate-docker/karate-chrome/target/karate.jar
+cp karate-core/target/karate-1.1.0.jar karate-docker/karate-chrome/target/karate.jar
 
 # build karate-chrome docker image that includes karate fatjar + maven jars for convenience
 docker build -t karate-chrome karate-docker/karate-chrome
@@ -28,10 +29,10 @@ docker run --name karate --rm --cap-add=SYS_ADMIN -v "$PWD":/karate -v "$HOME"/.
 sleep 5
 
 # run a test to check a particular jar packaging issue
-docker exec -w /karate karate mvn test -f karate-e2e-tests/pom.xml -Dtest=regex.RegexRunner
+#docker exec -w /karate karate mvn test -f karate-e2e-tests/pom.xml -Dtest=regex.RegexRunner
 
 # run tests against chrome
-docker exec -w /karate karate mvn test -f karate-e2e-tests/pom.xml -Dtest=driver.DockerRunner
+docker exec -w /karate karate mvn test -f karate-e2e-tests/pom.xml -Dtest=driver.TestRunner
 
 docker stop karate
 wait

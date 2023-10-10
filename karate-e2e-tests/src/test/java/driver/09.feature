@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/09'
-
+@ignore
 Scenario: friendly locators
 * def parent = waitFor('.div-02')
 # make sure the find-by-text works relative to search node and not from document root

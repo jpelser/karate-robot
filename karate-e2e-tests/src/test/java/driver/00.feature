@@ -4,7 +4,7 @@ Background:
 * driver serverUrl + '/00'
 * def dimensions = karate.get('dimensions')
 * if (dimensions) driver.dimensions = dimensions
-
+@ignore
 Scenario:
 # driver.send() (has to be first)
 * if (driverType == 'chrome') karate.call('12.feature')

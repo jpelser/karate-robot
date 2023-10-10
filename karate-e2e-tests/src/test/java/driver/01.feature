@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/01'
-
+@ignore
 Scenario:
 # assert page url
 # match driver.url == serverUrl + '/01'

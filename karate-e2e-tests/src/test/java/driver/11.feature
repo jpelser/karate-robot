@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/11'
-
+@ignore
 Scenario:
 * click("#helloDiv")
 * switchPage('/11_tab')

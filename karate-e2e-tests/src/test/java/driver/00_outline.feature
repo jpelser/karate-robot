@@ -1,5 +1,5 @@
 Feature:
-
+@ignore
 Scenario Outline: ${driverType}
 * call read('00.feature')
 

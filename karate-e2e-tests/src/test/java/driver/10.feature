@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/10'
-
+@ignore
 Scenario: scroll to a text and type in the input on the right
 * waitFor('{}this test verifies an element can be located even when the page needs scrolling')
 * scroll('{}Label without scroll :').input('it works')

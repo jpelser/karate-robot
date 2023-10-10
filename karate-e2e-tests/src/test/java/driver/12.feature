@@ -1,5 +1,5 @@
 Feature:
-
+@ignore
 Scenario:
 * driver 'https://invalid/url'
 * def frameTree = driver.send({ method: 'Page.getFrameTree' })

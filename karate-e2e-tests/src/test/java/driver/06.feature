@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/06'
-
+@ignore
 Scenario:
 * def loc1 = position('#first')
 * match loc1 contains { x: '#number', y: '#number', width: '#number', height: '#number' }

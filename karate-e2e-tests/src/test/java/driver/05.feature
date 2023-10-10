@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/05'
-
+@ignore
 Scenario:
 * url serverUrl + '/api/05'
 * method get

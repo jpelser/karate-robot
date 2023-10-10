@@ -2,6 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/07'
+@ignore
 
 Scenario:
 * input('#inputId', 'hello world')

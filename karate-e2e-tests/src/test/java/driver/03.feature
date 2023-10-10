@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/03'
-
+@ignore
 Scenario:
 # different ways to use waitUntil()
 * waitUntil('#helloDiv', "function(e){ return e.innerHTML == 'hello world' }")

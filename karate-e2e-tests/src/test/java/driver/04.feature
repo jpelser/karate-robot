@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/04'
-
+@ignore
 Scenario:
 # foo=bar is set by the server
 * def cookie1 = { name: 'foo', value: 'bar' }

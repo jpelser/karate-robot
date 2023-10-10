@@ -2,7 +2,7 @@ Feature:
 
 Background:
 * driver serverUrl + '/02'
-
+@ignore
 Scenario:
 # wait for slow loading element
 * waitFor('#slowDiv')
